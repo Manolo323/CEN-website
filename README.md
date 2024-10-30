@@ -14,8 +14,6 @@ This website allows users to search for and view articles related to the educati
 
 ## Technologies Used
 
-- **Frontend**: HTML5, CSS3, JavaScript, React.js
+- **Frontend**: HTML5, CSS3, TypeScript, React.ts
 - **Backend**: Node.js, Express
 - **Database**: Supabase
-- **Charting**: Chart.js for data visualization
-- **Deployment**: DigitalOcean for production

@@ -1,3 +1,5 @@
 /backend/src/dist   
+/backend/node_modules
+/backend/dist
 .DS_Store
 .idea
