@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./frontend  # Points to the frontend directory
+      dockerfile: Dockerfile  # Ensure there's a Dockerfile in the frontend directory
+    ports:
+      - '3000:3000'  # Change port as needed
+    volumes:
+      - ./frontend:/app  # Mount frontend source code for live updates if desired
+    environment:
+      - NODE_ENV=development
+
+  backend:
+    build:
+      context: ./backend  # Points to the backend directory
+      dockerfile: Dockerfile  # Ensure there's a Dockerfile in the backend directory
+    ports:
+      - '4000:4000'  # Change port as needed
+    volumes:
+      - ./backend:/app  # Mount backend source code for live updates if desired
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - frontend  # Optionally make backend wait until frontend is built
