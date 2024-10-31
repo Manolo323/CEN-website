@@ -12,7 +12,7 @@ app.use(express.json());
 
 // Example route for the root
 app.get('/', (req, res) => {
-  res.send('Hello world, this is my backend');
+  res.send('Hello world, this is my backend, again');
 });
 
 // Use your data routes for handling data-related requests

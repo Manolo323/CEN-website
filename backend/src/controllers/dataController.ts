@@ -12,4 +12,3 @@ export async function fetchData() {
 
     return data;
 }
-
