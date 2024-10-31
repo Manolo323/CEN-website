@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      Hello, world!
+      Hello, world! This is my frontend
     </>
   )
 }
