@@ -10,6 +10,7 @@ services:
     volumes:
       - ./backend:/app  # Mount the backend code for development
       - /app/node_modules  # Omit node_modules from mounting
+    command: ["npx", "nodemon", "src/utils/index.ts"]  # Use npx to run nodemon
 
   frontend:
     build:
