@@ -1,12 +1,12 @@
-import { Articles } from './components/articleGallery/DisplayArticleContent';
+import { Home } from "./pages/Home";
+
+
 
 export function App() {
     return (
         <div>
-            <h1>My App</h1>
-            <Articles /> 
+            <Home />
         </div>
     );
 }
 
-export default App;

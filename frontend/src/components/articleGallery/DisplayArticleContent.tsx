@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { fetchData } from '../../services/api'; // Adjust the path as needed
+import { fetchData } from '../../services/api';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function Articles() {
     const [cardData, setCardData] = useState<{
@@ -9,20 +10,24 @@ export function Articles() {
         text: string;
         items: string[];
         imageSrc: string;
-    } | null>(null); // Start with null
+    } | null>(null);
 
     useEffect(() => {
         fetchData()
-            .then((data) => {
-                console.log('Fetched data:', data); // Log the data to inspect it
+            .then((response) => {
+                console.log('Fetched data:', response); // Log to inspect structure
 
-                // Use optional chaining and provide a default value for preview_thumb
-                const thumbnailUrl = data.preview_thumb ? data.preview_thumb.split(' ')[0] : 'default-image-url.jpg';
+                if (!response || !response.data || response.data.length === 0) return;
+
+                // Extract the first item from the `data` array inside the response object
+                const rowData = response.data[0];
+                
+                const thumbnailUrl = rowData.preview_thumb ? rowData.preview_thumb.split(' ')[0] : 'default-image-url.jpg';
 
                 setCardData({
-                    title: data.show || 'No Title Available', // Provide default values if fields are missing
-                    text: data.overall_summary || 'No Summary Available',
-                    items: [data.station || 'Unknown Station'],
+                    title: rowData.show || 'No Title Available',
+                    text: rowData.overall_summary || 'No Summary Available',
+                    items: [rowData.station || 'Unknown Station'],
                     imageSrc: thumbnailUrl
                 });
             })
@@ -30,6 +35,7 @@ export function Articles() {
     }, []);
 
     if (!cardData) {
+        console.log("Data not yet set. Rendering loading state.");
         return <div>Loading...</div>; // Show loading state while fetching data
     }
 
