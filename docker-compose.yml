@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"  # Map the container port to the host port
     env_file:
-      - project.env  # Load environment variables from .env file
+      - project.env.local  # Load environment variables from .env file
     volumes:
       - ./backend:/app  # Mount the backend code for development
       - /app/node_modules  # Omit node_modules from mounting
