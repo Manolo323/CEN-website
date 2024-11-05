@@ -5,8 +5,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"  # Map the container port to the host port
-    env_file:
-      - project.env.local  # Load environment variables from .env file
+    # env_file:
+    #   - project.env.local  # Load environment variables from .env file
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY} 
     volumes:
       - ./backend:/app  # Mount the backend code for development
       - /app/node_modules  # Omit node_modules from mounting
