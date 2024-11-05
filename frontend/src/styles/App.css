@@ -1,8 +1,8 @@
-.hero-image {
+.cover-image {
     position: relative; /* Position context for absolutely positioned elements */
 }
 
-.hero-image img {
+.cover-image img {
     height: 500px; /* Fixed height */
     width: 100%; /* Full width of the container */
     object-fit: cover; /* Maintain aspect ratio and cover the area */

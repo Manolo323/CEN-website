@@ -6,14 +6,13 @@ export function Home() {
   return (
     <div>
       {/* Image Section */}
-      <div className="hero-image">
+      <div className="cover-image">
         <img
           src="/cen-brand-guidelines-1.png" // Adjust the path as needed
           alt="Hero"
           className="d-block w-100 hero-image" // Use the same class for styling
         />
       </div>
-
       {/* Articles Section */}
       <Container className="mt-4">
         <h2>Education News This Week</h2>
