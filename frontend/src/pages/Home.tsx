@@ -2,6 +2,7 @@ import { Carousel, Container } from "react-bootstrap";
 import '../styles/App.css';
 import { Articles } from "../components/articleGallery/DisplayArticleContent";
 import { NavigationBar } from "../components/navbar-functions/NavBar";
+import { Footer } from "../components/footer/Footer";
 
 export function Home() {
   return (
@@ -37,6 +38,7 @@ export function Home() {
         <h2>Latest Articles</h2>
         <Articles /> {/* This will render your card with the article data */}
       </Container>
+    <Footer />
     </div>
   );
 }

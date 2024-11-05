@@ -2,3 +2,16 @@
     height: 700px;
     object-fit: cover;
 }
+
+/* Footer*/
+.footer {
+    background-color: #343a40; /* Dark background */
+}
+
+.brand-icon {
+    width: 50px; /* Adjust size as needed */
+}
+
+.logo {
+    width: 100px; /* Adjust size as needed */
+}
