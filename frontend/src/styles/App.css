@@ -1,0 +1,74 @@
+.cover-image {
+    position: relative; /* Position context for absolutely positioned elements */
+}
+
+.cover-image img {
+    height: 500px; /* Fixed height */
+    width: 100%; /* Full width of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+
+/* Footer*/
+.footer {
+    background-color: #343a40; /* Dark background */
+}
+
+.brand-icon {
+    width: 50px; /* Adjust size as needed */
+}
+
+.logo {
+    width: 100px; /* Adjust size as needed */
+}
+
+/* Ensure the body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Layout styles */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set min height to full viewport height */
+}
+
+main {
+    flex: 1; /* Allow main to grow and take available space */
+}
+
+.article-container {
+    background-color: #f0f0f0; /* Background color */
+    padding: 20px; /* Padding around the content */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.article-image {
+    width: 100%; /* Full width */
+    height: 450px; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image fits within bounds */
+}
+
+.other-articles-container {
+    max-height: 400px; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-bottom: 20px; /* Add some space below the container */
+    border: 1px solid #ddd; /* Optional: Add a border to define the area */
+    border-radius: 5px; /* Optional: Round the corners */
+    padding: 10px; /* Optional: Add padding inside the container */
+    background-color: #f8f9fa; /* Optional: Set a background color */
+}
+
+.other-article-container {
+    padding: 5px; /* Reduce padding for each article item */
+    font-size: 0.9rem; /* Reduce font size for the article titles and summaries */
+}
+
+.other-article-image {
+    width: 80%; /* Set a smaller width for the thumbnail */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 60px; /* Set a maximum height for the thumbnail */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
