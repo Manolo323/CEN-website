@@ -9,7 +9,7 @@ services:
     #   - project.env.local  # Load environment variables from .env file
     environment:
       - SUPABASE_URL=${SUPABASE_URL}
-      - SUPABASE_KEY=${SUPABASE_KEY} 
+      - SUPABASE_KEY=${SUPABASE_KEY}
     volumes:
       - ./backend:/app  # Mount the backend code for development
       - /app/node_modules  # Omit node_modules from mounting
